@@ -1,0 +1,16 @@
+<%- include ("partials/header") -%>
+        <h1>Results page</h1>
+        <div class="row results">
+          <% data["Search"].forEach(function(movie) { if(movie["Poster"] != "N/A"){ %>
+            <div class="col-md-3 col-sm-6">
+              <div class="thumbnail">
+                <img src="<%= movie["Poster"] %>">
+                <div class="caption">
+                  <p><a href="/details/<%= movie["imdbID"] %>"><strong><%= movie["Title"] %></strong></a> - <%= movie["Year"] %></p>
+                </div>
+              </div>
+            </div>  
+          <% }}) %>
+        </div>
+        <a href="/">Search Again</a>
+<%- include ("partials/footer") -%>

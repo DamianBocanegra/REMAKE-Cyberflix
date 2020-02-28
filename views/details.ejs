@@ -1,0 +1,14 @@
+<%- include ("partials/header") -%>
+    <body>
+        <h1><%= data["Title"] %> - <%= data["Year"] %></h1>
+        <div class="infoPoster">
+            <img src="<%= data["Poster"] %>">
+        </div>
+        <div class="infoBlock">
+            <p><strong>Rating: </strong> <%= data["Rated"] %></p>
+            <p><strong>Genre: </strong> <%= data["Genre"] %></p>
+            <p><strong>Actors: </strong> <%= data["Actors"] %></p>
+            <p><strong>Description: </strong></p>
+            <p><%= data["Plot"] %></p>     
+        </div>
+<%- include ("partials/footer") -%>

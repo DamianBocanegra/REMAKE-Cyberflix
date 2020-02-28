@@ -1,0 +1,36 @@
+<%- include ("partials/header") -%>
+<div class="container">
+    <div class="jumbotron greeting">
+        <h1>Welcome to CyberFlix</h1>
+        <p>All of your movie needs online!</p>
+    </div>
+</div>
+
+<h1>Star Wars</h1>
+<div class="row results">
+    <% starWars["Search"].forEach(function(movie) { %>
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="<%= movie["Poster"] %>">
+          <div class="caption">
+            <p><a href="/details/<%= movie["imdbID"] %>"><strong><%= movie["Title"] %></strong></a> - <%= movie["Year"] %></p>
+          </div>
+        </div>
+      </div>  
+    <% }) %>
+  </div>
+
+<h1>Star Trek</h1>
+<div class="row results">
+    <% starTrek["Search"].forEach(function(movie) { %>
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="<%= movie["Poster"] %>">
+          <div class="caption">
+            <p><a href="/details/<%= movie["imdbID"] %>"><strong><%= movie["Title"] %></strong></a> - <%= movie["Year"] %></p>
+          </div>
+        </div>
+      </div>  
+    <% }) %>
+  </div>
+<%- include ("partials/footer") -%>
