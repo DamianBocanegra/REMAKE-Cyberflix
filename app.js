@@ -70,6 +70,4 @@ app.get("/details/:movieID", function(req, res){
 });
 
 
-app.listen(3000, function(){
-    console.log("movie app is running")
-});
+app.listen(process.env.PORT, process.env.IP);
